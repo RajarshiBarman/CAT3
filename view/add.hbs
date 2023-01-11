@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Records</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+        background-color: #A3D4D1;
+      }
+      h1{
+        margin: 2rem;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        font-size: 3.5rem;
+        color: blueviolet;
+      }
+      h2{
+      margin: 1rem;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 600;
+      font-size: 2rem;
+      color: blueviolet;
+        }
+      .container{
+        padding: 1.5rem;
+        margin: 2rem;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      label,input{
+        margin-bottom: 1.5rem;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        font-size: 25px;
+      }
+      .registerbtn{
+        padding: 1rem;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .registerbtn:hover{
+        padding: 1.5rem;
+        background-color: aliceblue;
+        transition: 3ms ease-in-out;
+      }
+      a{
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 25px;
+      }
+      a:hover{
+        font-size: 30px;
+        transition: 3ms ease-in-out;
+      }
+    </style>
+</head>
+<body>
+    <h1>INFOSYS SPRINGBOARD</h1>
+  <h2>ADD EMPLOYEE</h2>
+    <div class="container">
+       <form action="/addstudent" onsubmit="validate()">
+   
+    <label for="eid"><b>Employee ID</b></label>
+    <input type="text" placeholder="Enter EmpID" name="eid" id="eid" required>
+    <br>
+    <label for="ename"><b>Employee name</b></label>
+    <input type="text" placeholder="Enter EmpName" name="ename" id="ename" required>
+    <br>
+    <label for="empdesig"><b>Employee Designation</b></label>
+    <input type="text" placeholder="Enter EmpDesignation" name="empdesig" id="empdesig" required>
+    <br>
+    <label for="empdept"><b>Employee Department</b></label>
+    <input type="text" placeholder="Enter EmpDepartment" name="empdept" id="empdept" required>
+    <br>
+    <label for="empsal"><b>Employee Salary</b></label>
+    <input type="number" placeholder="Enter EmpSalary" name="empsal" id="empsal" required>
+    <br>
+    <label for="emploc"><b>Employee Location</b></label>
+    <input type="text" placeholder="Enter EmpLocation" name="emploc" id="emploc" required>
+    <br>
+    <button type="submit" class="registerbtn">ADD EMPLOYEE</button>
+  <br>
+  <br>
+  
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+     {{#if mesg}}
+     <h1>Data Inserted</h1>
+     {{/if}}
+
+      {{#if checkmesg}}
+     <h1>Emailid or Phoneno already present!</h1>
+     {{/if}}
+</form>
+</div>
+<script>
+  function validate()
+    {
+      validate_username();
+      checkphone();
+    }
+  function validate_username()
+    {
+      var usr=document.getElementById("ename").value;
+      var testcase = /^[a-zA-z]+$/;
+      if(!testcase.test(usr))
+      {
+        document.getElementById('ename').style.border="1px solid red";
+      window.alert("Invalid username. Try to put all characters");
+      event.preventDefault();
+      }
+    }
+    
+</script>
+</body>
+</html>
+
+

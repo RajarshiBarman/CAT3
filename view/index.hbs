@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins';
+      background-color: #A3D4D1;
+    }
+
+    h1{
+      margin: 2rem;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 600;
+      font-size: 3.5rem;
+      color: blueviolet;
+    }
+
+    h2{
+      margin: 1rem;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 600;
+      font-size: 2rem;
+      color: blueviolet;
+    }
+
+    .options{
+      padding: 1.5rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    .links {
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 25px;
+      color: black;
+    }
+
+    .links:hover {
+      align-items: center;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      font-size: 35px;
+      color: red;
+
+    }
+  </style>
+</head>
+<body>
+  <h1>INFOSIS SPRINGBOARD</h1>
+  <h2>Click on the following links to see the working of each operations of employee</h2>
+  <div class="options">
+    <a href="/add">
+      <div class="links">
+        <span class="material-icons">Add Employee</span>
+      </div>
+    </a>
+    <a href="/search1">
+      <div class="links">
+        <span class="material-icons">Search Employee by Department</span>
+      </div>
+    </a>
+    <a href="/search2">
+      <div class="links">
+        <span class="material-icons">Search Employee by Department and Salary</span>
+      </div>
+    </a>
+    <a href="/delete">
+      <div class="links">
+        <span class="material-icons">Delete Employee</span>
+      </div>
+    </a>
+    <a href="/update">
+      <div class="links">
+        <span class="material-icons">Update Employee</span>
+      </div>
+    </a>
+    <a href="/view">
+      <div class="links">
+        <span class="material-icons">View Employee</span>
+      </div>
+    </a>
+  </div>
+</body>
+</html>

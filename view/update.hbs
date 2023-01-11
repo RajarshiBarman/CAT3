@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+        background-color: #A3D4D1;
+      }
+      h1{
+        margin: 2rem;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        font-size: 3.5rem;
+        color: blueviolet;
+      }
+      h2{
+      margin: 1rem;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 600;
+      font-size: 2rem;
+      color: blueviolet;
+        }
+      .container{
+        padding: 1.5rem;
+        margin: 2rem;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      label,input{
+        margin-bottom: 1.5rem;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        font-size: 25px;
+      }
+      .registerbtn{
+        padding: 1rem;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .registerbtn:hover{
+        padding: 1.5rem;
+        background-color: aliceblue;
+        transition: 3ms ease-in-out;
+      }
+      a{
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 25px;
+      }
+      a:hover{
+        font-size: 30px;
+        transition: 3ms ease-in-out;
+      }
+    </style>
+</head>
+<body>
+    <h1>INFOSYS SPRINGBOARD</h1>
+  <h2>UPDATE EMPLOYEE</h2>
+    <div class="container">
+      <form action="/updatesearch">
+ 
+    <label for="eid"><b>Employee ID</b></label>
+    <input type="text" placeholder="type employee id" name="eid" id="eid" required>
+    <br>
+    <button type="submit" class="registerbtn">SEACRH EMPLOYEE</button>
+    <br><br>
+    {{#if umesg}}
+    <h1>Data Updated</h1>
+    {{/if}}
+     {{#if mesg2}}
+     <h1>Data Not Found!</h1>
+     {{/if}}
+     <br>
+    <a href="./" style="color:black">BACK TO HOME PAGE</a>
+    <br>
+    </form>
+  </div>
+
+  {{#if mesg1}}
+  <h2>UPDATE SEARCHED EMPLOYEE</h2>
+     <div class="container">
+       <form action="/updatestudent">
+    {{#data}}
+
+    <label for="eid"><b>Employee ID</b></label>
+    <input type="text" placeholder="Enter EmpID" name="eid" value={{eid}} id="eid" required readonly>
+    <br>
+    <label for="ename"><b>Employee name</b></label>
+    <input type="text" placeholder="Enter EmpName" name="ename" value={{ename}} id="ename" required readonly>
+    <br>
+    <label for="empdesig"><b>Employee Designation</b></label>
+    <input type="text" placeholder="Enter EmpDesignation" name="empdesig" value={{empdesig}} id="empdesig" required readonly>
+    <br>
+    <label for="empdept"><b>Employee Department</b></label>
+    <input type="text" placeholder="Enter EmpDepartment" name="empdept" id="empdept" value={{empdept}} required readonly>
+    <br>
+    <label for="empsal"><b>Employee Salary</b></label>
+    <input type="number" placeholder="Enter EmpSalary" name="empsal" id="empsal" value={{empsal}} required readonly>
+    <br>
+    <label for="emploc"><b>Employee Location</b></label>
+    <input type="text" placeholder="Enter EmpLocation" name="emploc" id="emploc"  required>
+    <br>
+    <button type="submit" class="registerbtn">UPDATE EMPLOYEE</button>
+  <br>
+  <br>
+  
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+    {{/data}}
+</form>
+</div>
+     {{/if}}
+
+</body>
+</html>
+

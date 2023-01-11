@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+        background-color: #A3D4D1;
+        text-align: center;
+      }
+      h1{
+        margin: 2rem;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        font-size: 3.5rem;
+        color: blueviolet;
+      }
+      .registerbtn{
+        padding: 1rem;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .registerbtn:hover{
+        padding: 1.5rem;
+        background-color: aliceblue;
+        transition: 3ms ease-in-out;
+      }
+      a{
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 25px;
+      }
+      a:hover{
+        font-size: 30px;
+        transition: 3ms ease-in-out;
+      }
+      table{
+        width: 75%;
+        margin: 2rem auto;
+        border-collapse: collapse;
+      }
+    th{
+            text-align: center;
+            font-size: 25px;
+            font-weight: 600;
+            background-color: darkgoldenrod;
+            color: white;
+            padding: 25px;
+        }
+    td{
+            text-align: center;
+            font-size: 20px;
+            font-weight: 400;
+            background-color: white;
+            color: black;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+<h1>VIEW INFOSYS SPRINGBOARD EMPLOYEE</h1>
+
+    <table>
+    <thead>
+        <tr>
+        <th scope="col">Emp_ID</th>
+        <th scope="col">Emp_Name</th>
+        <th scope="col">Emp_Designation</th>
+        <th scope="col">Emp_Department</th>
+        <th scope="col">Emp_Salary</th>
+        <th scope="col">Emp_Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#data}}
+        <tr>
+        
+        <td>{{eid}}</td>
+        <td>{{ename}}</td>
+        <td>{{empdesig}}</td>
+        <td>{{empdept}}</td>
+        <td>{{empsal}}</td>
+        <td>{{emploc}}</td>
+        </tr>
+        {{/data}}
+    
+        
+    </tbody>
+    </table>
+      <a href="./">BACK TO HOME PAGE</a> <br>
+
+</body>
+</html>

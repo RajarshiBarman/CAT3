@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+        background-color: #A3D4D1;
+      }
+      h1{
+        margin: 2rem;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        font-size: 3.5rem;
+        color: blueviolet;
+      }
+      h2{
+      margin: 1rem;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 600;
+      font-size: 2rem;
+      color: blueviolet;
+        }
+      .container{
+        padding: 1.5rem;
+        margin: 2rem;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      label,input{
+        margin-bottom: 1.5rem;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        font-size: 25px;
+      }
+      .registerbtn{
+        padding: 1rem;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .registerbtn:hover{
+        padding: 1.5rem;
+        background-color: aliceblue;
+        transition: 3ms ease-in-out;
+      }
+      a{
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 25px;
+      }
+      a:hover{
+        font-size: 30px;
+        transition: 3ms ease-in-out;
+      }
+    </style>
+</head>
+<body>
+    <h1>INFOSYS SPRINGBOARD</h1>
+  <h2>SEARCH EMPLOYEE</h2>
+    <div class="container">
+      <form action="/searchstudentbyphno">
+ 
+    <label for="empdept"><b>Employee Department</b></label>
+    <input type="text" placeholder="type emp department" name="empdept" id="empdept" required>
+    <br>
+    <button type="submit" class="registerbtn">SEACRH EMPLOYEE</button>
+    <br><br>
+    <a href="./" style="color:black">BACK TO HOME PAGE</a>
+    <br>
+     {{#if mesg1}}
+     <h1>Data Found!</h1>
+     <a href="/view">
+      <div class="links">
+        <span class="material-icons">View Employee</span>
+      </div>
+     {{/if}}
+
+     {{#if mesg2}}
+     <h1>Data Not Found!</h1>
+     {{/if}}
+    </form>
+  </div>
+</body>
+</html>
